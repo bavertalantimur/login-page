@@ -19,7 +19,7 @@
 .row-2{
     width: 1600px;
     height: 458px;
-    background-color: gray;
+    
 }
 .logo{
     color: #FFF;
@@ -114,6 +114,7 @@ line-height: normal;
 
 .sign-up {
     text-decoration: none;
+    color: blue;
     
 }
 .icon{
@@ -135,7 +136,7 @@ font-size: 16px;
 font-weight: 400;
 line-height: 24px;
 letter-spacing: 0em;
-text-align: left;
+
 width: 200px;
 height: 50px;
 
@@ -148,6 +149,7 @@ background-repeat: no-repeat;
 background-position: 8px;
 text-align: center;
 transition: 1s  background-color;
+border-color: #FFFFFF;
 
 
 
@@ -219,6 +221,7 @@ input::placeholder{
 }
 .sign-in-content + a {
     text-decoration: none;
+    color: blue;
     
     position: relative;
     top: 10px;
@@ -235,4 +238,58 @@ line-height: 24px;
 letter-spacing: 0em;
 color: #FFFFFF;
     
+}
+
+
+.row-2 div:nth-child(1) {
+    
+    
+        font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    justify-content: center;
+    height: 20px;
+    margin-left:  50px;
+    margin-top: 50px;
+    text-align: center;
+    
+    
+    
+    
+}
+.row-2{
+    width: 100%;
+    display: flex;
+    flex-direction: flex;
+    gap: 50px;
+}
+.login-as-1 , .login-as-2{
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    border-radius: 9px;
+    margin-top: 80px;
+    
+    box-sizing: border-box;
+    background-color: #EFF8FF;
+    text-align: center;
+}  
+.login-as-1 img, .login-as-2 img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: relative;
+    top: 40px;
+    left: 40px;
+
+}
+.login-as-1  span,.login-as-2 span{
+    position: relative;
+    top: 60px;
+    right: 50px;
+   
+
+
 }
