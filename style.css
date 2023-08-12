@@ -1,25 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 *{
     margin: 0;
     padding: 0;
+
+    /*
+    sitedeki tüm yazıları poppins fontu yapar
+    sans-serif ise eğer poppins fontunu bulamazsa bir sans-serif ailesine
+    ait font seçer
+    */
+    font-family: 'Poppins', sans-serif; 
 }
 .container{
     
-    width: 1600px;
+    width: 100%;
     height: 900px;
    
 }
-.row-1{
-    width: 1600px;
+#header{
+    width: 100%;
     height: 458px;
     background-color: #0089ED;
     display: flex;
     flex-direction: column;
    
 }
-.row-2{
-    width: 1600px;
+#login-as{
+    width: 100%;
     height: 458px;
-    
+
 }
 .logo{
     color: #FFF;
@@ -42,10 +51,7 @@ h3,h6{
     
     padding-left: 170px;
     padding-top: 50px;
-    
-   
-    
-    
+    text-shadow: 3px 3px rgb(60, 60, 60);
 }
 
 .lorem{
@@ -56,9 +62,11 @@ font-style: normal;
 font-weight: 300;
 line-height: normal;
 padding-left: 170px;
+width:314px;
+text-shadow: 2px 2px rgb(1.5,1.3,1.2)
 
 }
-.sign-in{
+#sign-in{
     width: 539px;
     height: 741px;
     border-radius: 40px;
@@ -71,7 +79,7 @@ padding-left: 170px;
     bottom: 80px;
 }
 .lorem-2{
-    color: #000;
+    
 font-family: Poppins;
 font-size: 21px;
 font-style: normal;
@@ -80,7 +88,7 @@ line-height: normal;
 
 }
 h2{
-    color: #000;
+    color:rgba(0, 0, 0, 0.77);
 font-family: Poppins;
 font-size: 55px;
 font-style: normal;
@@ -88,13 +96,14 @@ font-weight: 500;
 line-height: normal;
 
 }
+
 .sign-in-header{
     display: flex;
     justify-content: space-between;
     
     
 }
-.header-1{
+.header-intro{
    
     margin: 20px;
     padding: 30px;
@@ -102,7 +111,10 @@ line-height: normal;
     
 
 }
-.header-2{
+.header-intro  span{
+    color: slateblue;
+}
+.header-sign-up{
     
     
     margin: 20px;
@@ -112,9 +124,11 @@ line-height: normal;
     
 }
 
+
 .sign-up {
     text-decoration: none;
     color: blue;
+    opacity: 0.7;
     
 }
 .icon{
@@ -147,9 +161,10 @@ background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0i
 background-color: white;
 background-repeat: no-repeat;
 background-position: 8px;
-text-align: center;
+text-align: right;
 transition: 1s  background-color;
 border-color: #FFFFFF;
+padding-right: 3px;
 
 
 
@@ -237,14 +252,19 @@ font-weight: 500;
 line-height: 24px;
 letter-spacing: 0em;
 color: #FFFFFF;
+cursor: pointer;
+    
+}
+input[type="submit"]:hover{
+    box-shadow: 5px 5px gray;
+    color:crimson;
     
 }
 
 
-.row-2 div:nth-child(1) {
+#login-as div:nth-child(1) {
     
-    
-        font-family: Poppins;
+    font-family: Poppins;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
@@ -252,44 +272,78 @@ color: #FFFFFF;
     justify-content: center;
     height: 20px;
     margin-left:  50px;
-    margin-top: 50px;
     text-align: center;
-    
-    
-    
-    
+  
 }
-.row-2{
+#login-as{
     width: 100%;
     display: flex;
-    flex-direction: flex;
-    gap: 50px;
+    flex-direction: column;
+    
 }
-.login-as-1 , .login-as-2{
+.logged-user-card {
     width: 200px;
     height: 200px;
     background-color: white;
     border-radius: 9px;
     margin-top: 80px;
+    position: relative;
+    
     
     box-sizing: border-box;
-    background-color: #EFF8FF;
+    background-color:transparent;
+    border: 1px solid lightblue;
+    
     text-align: center;
-}  
-.login-as-1 img, .login-as-2 img{
+} 
+.logged-user-card:hover{
+    border: 2px double rebeccapurple;
+    filter: drop-shadow(0 0 5px rebeccapurple);
+    
+    transition: 2s all;
+
+}
+
+
+.logged-user-card img{
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    position: relative;
+    position: absolute;
     top: 40px;
     left: 40px;
 
 }
-.login-as-1  span,.login-as-2 span{
-    position: relative;
-    top: 60px;
+.logged-user-card img:hover{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    
+}
+
+.logged-user-card img:hover + span{
+    display: none;
+}
+.logged-user-card span{
+    position: absolute;
+    top: 140px;
     right: 50px;
-   
 
 
+}
+.login-as-list{
+    display:flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 50px;
+}
+.login-title{
+    color:#333;
+    padding-left:65px;
+}
+.login-title{
+    text-shadow: 2px 2px red;
 }
